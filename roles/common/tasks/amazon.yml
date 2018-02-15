@@ -1,0 +1,12 @@
+---
+# Download and Install epel repo for Amazon linux
+- name: Download EPEL Repo for Amazon Linux
+  get_url: url=http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm dest=/tmp/epel-release-latest-7.noarch.rpm
+  
+- name: Install EPEL Repo for Amanzon Linux
+  command: rpm -ivh /tmp/epel-release-latest-7.noarch.rpm creates=/etc/yum.repos.d/epel.repo
+ 
+# Install selinux and python libraries
+- name: Install libselinux-python for Amazon Linux
+  yum: name=libselinux-python state=present
+  
