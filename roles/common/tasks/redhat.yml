@@ -21,7 +21,7 @@
 - name: Install libselinux-python,httpd and firewalld
   yum: name={{ item }} state=present 
   with_items:
-    - libselinux-python
+    # - libselinux-python
     - httpd
     - firewalld
 
