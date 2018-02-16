@@ -40,15 +40,15 @@
 - name: Make sure the tomcat is started
   service: name=tomcat state=started enabled=yes
 
-# Inserting firewall rule for allow http_port for tomcat
-- name: Insert firewalld rule for tomcat http port
-  firewalld: port={{ http_port }}/tcp permanent=true state=enabled immediate=yes
-  when: "ansible_os_family == 'RedHat' and ansible_distribution_major_version == '7'"
+# # Inserting firewall rule for allow http_port for tomcat
+# - name: Insert firewalld rule for tomcat http port
+#   firewalld: port={{ http_port }}/tcp permanent=true state=enabled immediate=yes
+#   when: "ansible_os_family == 'RedHat' and ansible_distribution_major_version == '7'"
 
-# Inserting firewall rule for allow https_port for tomcat
-- name: Insert firewalld rule for tomcat https port
-  firewalld: port={{ https_port }}/tcp permanent=true state=enabled immediate=yes
-  when: "ansible_os_family == 'Redhat' and ansible_distribution_major_version == '7'"
+# # Inserting firewall rule for allow https_port for tomcat
+# - name: Insert firewalld rule for tomcat https port
+#   firewalld: port={{ https_port }}/tcp permanent=true state=enabled immediate=yes
+#   when: "ansible_os_family == 'Redhat' and ansible_distribution_major_version == '7'"
 
 # Waits untill the tomcat server starts
 - name: Wait for tomcat to start
