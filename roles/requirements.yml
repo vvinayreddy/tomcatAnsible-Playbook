@@ -1,4 +1,4 @@
 # from github
 - scm: github 
-  src: https://github.com/stackaero/ansible
-  name: Apache
+  src: https://github.com/vvinayreddy/Two-roles-testing
+  name: openjdk
