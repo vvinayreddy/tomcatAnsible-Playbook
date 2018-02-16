@@ -1,0 +1,6 @@
+# from github
+- src: https://github.com/vvinayreddy/tomcatAnsible-Playbook
+
+# from Bitbucket
+- src: https://github.com/stackaero/ansible/tree/master/roles/Apache
+  
