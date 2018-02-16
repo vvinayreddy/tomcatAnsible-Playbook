@@ -5,7 +5,7 @@
   
 - name: Include redhat if the operating system is redhat
   include: redhat.yml
-  when: ansible_distribution == 'CentOS'
+  when: ansible_distribution == 'Redhat'
   
 - name: Include amazon.yml if the operating system is amazon
   include: amazon.yml
